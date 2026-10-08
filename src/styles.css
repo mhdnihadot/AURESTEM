@@ -34,6 +34,7 @@ a { text-decoration:none; } button,input,select,textarea { font:inherit; } butto
 
 /* Contact details */
 .phone-list { display:flex; flex-direction:column; align-items:flex-start; gap:7px; }
+.office-address { display:flex; flex-direction:column; gap:3px; font-style:normal; line-height:1.5; } .contact-details .office-address { font-size:14px; } .footer-details .office-address { font-size:11px; opacity:.85; }
 .footer-details a.footer-direct { display:inline-flex; gap:0; align-items:baseline; font-size:11px; opacity:.85; }
 .footer-details a.footer-direct:hover { opacity:1; color:var(--lime); }
 .contact-details { display:flex; flex-direction:column; align-items:flex-start; gap:12px; margin-top:44px; padding-top:28px; border-top:1px solid var(--border); }
@@ -41,3 +42,47 @@ a { text-decoration:none; } button,input,select,textarea { font:inherit; } butto
 .contact-details a { display:inline-flex; align-items:center; gap:12px; font-size:14px; }
 .contact-details a:hover { color:var(--bio-green); }
 @media(max-width:800px) { .contact-details { margin-top:28px; padding-top:22px; } }
+
+.bro { --bro-bg:#2c4f2d; --bro-y:#ede332; --bro-line:#98b597; background:var(--bro-bg); color:#fff; padding-block:clamp(3rem,7vw,6rem); }
+.bro-inner { width:min(1440px,100% - 32px); margin-inline:auto; }
+.bro-y { color:var(--bro-y); }
+.bro-eyebrow { font-family:'Righteous',var(--font-sans); font-size:13px; letter-spacing:.14em; margin-bottom:clamp(1.5rem,4vw,2.5rem); font-weight:400; }
+.bro-cols { display:grid; grid-template-columns:1fr 1fr; gap:0 clamp(2rem,5vw,4.5rem); }
+.bro-col { display:flex; flex-direction:column; min-width:0; }
+.bro-block, .bro-pair { padding-block:clamp(1.25rem,2.5vw,2rem); }
+.bro-col > * + *, .bro-uses { border-top:2px dashed var(--bro-line); }
+.bro-col > .bro-uses { border-top:0; padding-top:0; }
+.bro-has-side { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.75fr); gap:20px; align-items:start; }
+.bro-wide-side { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+.bro-pair { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:24px; }
+.bro-pair > .bro-block { padding:0; } .bro-pair > .bro-block + .bro-block { border-left:2px dashed var(--bro-line); padding-left:24px; }
+.bro-title { font-family:'Righteous',var(--font-sans); font-weight:400; text-transform:uppercase; font-size:clamp(1.25rem,2.1vw,1.7rem); line-height:1.15; letter-spacing:.02em; margin-bottom:.9rem; }
+.bro-pill { display:inline-block; background:#fff; color:var(--bro-bg); font-family:'Righteous',var(--font-sans); text-transform:uppercase; font-size:clamp(1rem,1.7vw,1.35rem); padding:.35em 1em; border-radius:999px; margin-bottom:1rem; }
+.bro-sub { font-size:clamp(1rem,1.4vw,1.15rem); font-weight:700; line-height:1.35; margin-bottom:.8rem; }
+.bro-intro { font-size:14px; font-weight:600; line-height:1.45; margin-bottom:.8rem; }
+.bro-points { list-style:none; padding:0; margin:0 0 1rem; display:grid; gap:3px; font-size:14px; font-weight:600; }
+.bro-points li { padding-left:14px; position:relative; } .bro-points li::before { content:''; position:absolute; left:0; top:.55em; width:6px; height:6px; border-radius:50%; background:var(--bro-y); }
+.bro-apps { font-size:14px; opacity:.85; margin-bottom:.9rem; }
+.bro-partner { font-size:clamp(1rem,1.6vw,1.3rem); font-weight:700; line-height:1.3; margin-bottom:1rem; } .bro-partner-lg { font-size:clamp(1.1rem,1.8vw,1.45rem); }
+.bro-tag { font-size:clamp(1rem,1.5vw,1.2rem); font-weight:800; line-height:1.3; }
+.bro-caption { font-size:14px; opacity:.85; margin-top:.75rem; }
+.bro-photos { display:grid; grid-template-columns:repeat(var(--cols),minmax(0,1fr)); gap:10px; }
+.bro-photos img { width:100%; height:auto; border-radius:8px; background:#fff; display:block; }
+.bro-photos-row img { aspect-ratio:4/3; object-fit:cover; border:2px solid #8a6a43; border-radius:2px; }
+.bro-photos-single { max-width:180px; }
+.bro-photos-essentials { grid-template-columns:1.8fr 1fr 1fr; align-items:center; }
+.bro-side-apps { font-weight:700; font-size:14px; margin-top:12px; }
+.bro-uses { padding-bottom:1rem; } .bro-uses h4 { color:var(--bro-y); text-align:center; text-decoration:underline; font-weight:700; margin-bottom:.6rem; }
+.bro-uses dl { display:grid; grid-template-columns:1fr 1fr; gap:12px 24px; } .bro-uses dt { color:var(--bro-y); font-weight:700; } .bro-uses dd { font-size:13px; opacity:.85; margin:0; }
+.bro-industrial { border-top:2px dashed var(--bro-line); padding-block:clamp(1.5rem,3vw,2.5rem); }
+.bro-banner { display:inline-block; background:#fff; color:var(--bro-bg); font-family:'Righteous',var(--font-sans); font-weight:400; text-transform:uppercase; font-size:clamp(1.25rem,2.1vw,1.7rem); padding:.35em 1em; border-radius:0 999px 999px 0; margin-bottom:1.5rem; }
+.bro-industrial-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px clamp(2rem,5vw,4.5rem); }
+.bro-tagbox { display:inline-block; border:2px solid var(--bro-y); color:var(--bro-y); font-weight:700; font-size:clamp(1rem,1.5vw,1.2rem); padding:.4em .9em; margin-bottom:.9rem; }
+.bro-industrial-grid p { font-size:clamp(1rem,1.4vw,1.15rem); font-weight:600; line-height:1.45; max-width:34ch; }
+.bro-certs { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; border-top:2px dashed var(--bro-line); padding-top:clamp(1.5rem,3vw,2.5rem); }
+.bro-cert { border:2px solid var(--bro-y); padding:20px 18px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:12px; }
+.bro-cert-mark { font-family:'Righteous',var(--font-sans); color:var(--bro-y); font-size:clamp(1.2rem,2vw,1.6rem); line-height:1.15; min-height:2.3em; display:flex; align-items:center; }
+.bro-cert p { font-size:13px; line-height:1.45; opacity:.9; }
+@media (max-width: 900px) { .bro-certs { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width: 900px) { .bro-cols { grid-template-columns:1fr; } .bro-col + .bro-col { border-top:2px dashed var(--bro-line); } }
+@media (max-width: 600px) { .bro-has-side, .bro-wide-side, .bro-pair { grid-template-columns:1fr; } .bro-pair > .bro-block + .bro-block { border-left:0; padding-left:0; border-top:2px dashed var(--bro-line); padding-top:1.25rem; } .bro-photos-row { grid-template-columns:repeat(2,minmax(0,1fr)); } .bro-side .bro-photos { max-width:420px; } .bro-uses dl { grid-template-columns:1fr; } .bro-uses h4 { text-align:left; } .bro-industrial-grid, .bro-certs { grid-template-columns:1fr; } }
